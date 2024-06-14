@@ -1,0 +1,35 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>{{ artist.name }}</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<h1>{{ artist.name }}</h1>
+<div class="container">
+<div class="bio">
+<h2>Bio</h2>
+<p>{{ artist.bio }}</p>
+</div>
+<div class="portfolio">
+<h2>Portfolio</h2>
+<ul>
+{% for image in artist.portfolio %}
+<li><img src="{{ image }}" alt=""></li>
+{% endfor %}
+</ul>
+</div>
+<div class="social-media">
+<h2>Social Media</h2>
+<ul>
+{% for link in artist.social_media %}
+<li><a href="{{ link }}">{{ link }}</a></li>
+{% endfor %}
+</ul>
+</div>
+</div>
+</body>
+</html>
+
+
