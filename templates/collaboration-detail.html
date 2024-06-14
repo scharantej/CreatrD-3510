@@ -1,0 +1,34 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>{{ collaboration.title }}</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<h1>{{ collaboration.title }}</h1>
+<div class="container">
+<div class="description">
+<h2>Description</h2>
+<p>{{ collaboration.description }}</p>
+</div>
+<div class="participants">
+<h2>Participants</h2>
+<ul>
+{% for participant in collaboration.participants %}
+<li>{{ participant }}</li>
+{% endfor %}
+</ul>
+</div>
+<div class="gallery">
+<h2>Gallery</h2>
+<ul>
+{% for image in collaboration.gallery %}
+<li><img src="{{ image }}" alt=""></li>
+{% endfor %}
+</ul>
+</div>
+</div>
+</body>
+</html>
+
