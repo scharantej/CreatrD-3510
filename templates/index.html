@@ -1,0 +1,31 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>Generative Artists, Musicians, and Creators</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<h1>Generative Artists, Musicians, and Creators</h1>
+<div class="container">
+<div class="artists">
+<h2>Artists</h2>
+<ul>
+{% for artist in artists %}
+<li><a href="/artist/{{ artist.id }}">{{ artist.name }}</a></li>
+{% endfor %}
+</ul>
+</div>
+<div class="collaborations">
+<h2>Collaborations</h2>
+<ul>
+{% for collaboration in collaborations %}
+<li><a href="/collaboration/{{ collaboration.id }}">{{ collaboration.title }}</a></li>
+{% endfor %}
+</ul>
+</div>
+</div>
+</body>
+</html>
+
+
